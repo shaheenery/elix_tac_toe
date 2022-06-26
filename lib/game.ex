@@ -1,4 +1,6 @@
-defmodule Game do
+defmodule ElixTacToe.Game do
+  alias ElixTacToe.Game
+
   defstruct board: {nil,nil,nil,nil,nil,nil,nil,nil,nil},
             marker: :x,
             winner: nil,
@@ -25,7 +27,7 @@ defmodule Game do
     [2, 4, 6]
   ]
 
-  def place_marker(game = %Game{is_finished: true}), do: {:error, :game_over}
+  def place_marker(%Game{is_finished?: true}), do: {:error, :game_already_over}
   def place_marker(game = %Game{board: board, marker: marker}, square) when is_nil elem(board, square) do
     {
       :ok,

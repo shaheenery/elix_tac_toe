@@ -3,6 +3,8 @@ defmodule ElixTacToe do
   Documentation for `ElixTacToe`.
   """
 
+  alias ElixTacToe.UI.{CommandLine}
+
   @doc """
   Hello world.
 
@@ -14,5 +16,9 @@ defmodule ElixTacToe do
   """
   def hello do
     :world
+  end
+
+  def play_command_line do
+    CommandLine.start
   end
 end
