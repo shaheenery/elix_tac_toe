@@ -185,7 +185,7 @@ defmodule ElixTacToe.Server do
     Registry.keys(ElixTacToe.GameRegistry, self()) |> List.first()
   end
 
-  defp my_topic do
-    "game:#{my_game_name()}"
-  end
+  # defp my_topic do
+  #   "game:#{my_game_name()}"
+  # end
 end
