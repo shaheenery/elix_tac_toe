@@ -100,6 +100,15 @@ defmodule ElixTacToe.Server do
     {:reply, game, game, @timeout}
   end
 
+  def handle_call({:place_marker, square_number}, _from, game) do
+    case Game.place_marker(game, square_number - 1) do
+      {:ok, after_placement} ->
+        {:reply, after_placement, after_placement, @timeout}
+      {:error, msg} ->
+        {:reply, {:error, msg}, game, @timeout}
+    end
+  end
+
   # def handle_call({:take_color, player_id, location, color}, _from, {game, mapping}) do
   #   {_player, player_ord} = Map.get(mapping, player_id)
 
