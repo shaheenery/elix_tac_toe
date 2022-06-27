@@ -1,21 +1,12 @@
 # ElixTacToe
 
-**TODO: Add description**
+**Sharpening the saw**
+
+Hey Dan, let's talk about our different versions sometime.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elix_tac_toe` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:elix_tac_toe, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/elix_tac_toe](https://hexdocs.pm/elix_tac_toe).
+1. Clone the repo && `cd elix_tac_toe`
+2. `iex -S mix`
+3. `ElixTacToe.play_command_line`
 
